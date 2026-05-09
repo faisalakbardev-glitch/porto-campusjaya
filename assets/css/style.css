@@ -1,29 +1,24 @@
+/* --- Base Styles --- */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     color: #333;
+    overflow-x: hidden;
 }
 
-/* Hero Gradient & Background */
+/* --- Hero Section --- */
 .hero-section {
-    background: linear-gradient(135deg, #1e3a8a  0%, #0f172a 50%, #000000 100%);
+    /* Gradient navy sesuai kode lama lo */
+    background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 50%, #000000 100%);
     position: relative;
     overflow: hidden;
     padding-bottom: 100px;
 }
 
-/* Navbar Scrolled State */
-.navbar {
-    transition: all 0.4s ease;
-    padding: 20px 0;
-}
-
-.navbar.scrolled {
-    background: 0f172a !important;
-    padding: 10px 0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-/* Hero Animations */
+/* Hero Image Animation */
 .hero-img {
     animation: float 6s ease-in-out infinite;
     max-height: 450px;
@@ -35,7 +30,47 @@ body {
     100% { transform: translateY(0px); }
 }
 
-/* Wave Styling */
+/* --- Navbar Styling --- */
+.navbar {
+    transition: all 0.4s ease;
+    padding: 20px 0;
+}
+
+/* State Navbar saat di-scroll */
+.navbar.scrolled {
+    background: #0f172a !important; /* Fix: Tambah tanda # */
+    padding: 10px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* --- Mobile Toggle Menu --- */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        /* Warna background menu mobile disamakan dengan tema navy/dark blue */
+        background: rgba(15, 23, 42, 0.98); 
+        margin-top: 15px;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    
+    .nav-item {
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .hero-text {
+        text-align: center;
+        padding-top: 100px;
+    }
+}
+
+/* --- Wave & Decoration --- */
 .wave-container {
     position: absolute;
     bottom: 0;
@@ -43,18 +78,15 @@ body {
     line-height: 0;
 }
 
-/* Decoration */
 .underline {
     width: 80px;
     height: 4px;
+    /* Underline gradient pink-orange sesuai code lama */
     background: linear-gradient(to right, #d53369, #daae51);
     border-radius: 2px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 991px) {
-    .hero-text {
-        text-align: center;
-        padding-top: 100px;
-    }
+/* --- Sections --- */
+#projects-section {
+    scroll-margin-top: 80px; /* Jarak agar judul tak tertutup navbar fixed */
 }

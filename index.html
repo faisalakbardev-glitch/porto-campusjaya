@@ -8,24 +8,33 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        /* Gue selipin CSS Smooth Scroll di sini biar fix jalannya mulus */
+        html {
+            scroll-behavior: smooth;
+        }
+        #projects-section {
+            scroll-margin-top: 80px; /* Supaya judul nggak ketutup navbar pas discroll */
+        }
+    </style>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="mainNav">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
-                Campus Jaya
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <h1 class="navbar-brand fw-bold mb-0">Campus Jaya</h1>
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://test.campusjaya.site/">Toko Gen Z</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-outline-light rounded-pill px-4" href="#">Action</a>
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects-section">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about-section">About</a></li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a class="btn btn-outline-light rounded-pill px-4 w-100" href="#">Action</a>
                     </li>
                 </ul>
             </div>
@@ -40,7 +49,7 @@
                     <h1 class="display-4 fw-bold mb-4">Main Hero Message to sell yourself!</h1>
                     <p class="lead mb-5 opacity-75">Sub-hero message, not too long and not too short. Make it just right for your audience!</p>
                 </div>
-            </div>
+                </div>
         </div>
         
         <div class="wave-container">
@@ -50,10 +59,19 @@
         </div>
     </section>
 
-    <section class="py-5">
+    <section id="projects-section" class="py-5">
         <div class="container text-center py-5">
             <h2 class="display-5 fw-bold mb-4">Projects</h2>
             <div class="underline mx-auto mb-4"></div>
+            <p class="text-muted">Projects Coming Soon.</p>
+        </div>
+    </section>
+
+    <section id="about-section" class="py-5">
+        <div class="container text-center py-5">
+            <h2 class="display-5 fw-bold mb-4">About</h2>
+            <div class="underline mx-auto mb-4"></div>
+            <p class="text-muted">Hi There.</p>
         </div>
     </section>
 

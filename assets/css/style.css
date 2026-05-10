@@ -1,14 +1,23 @@
-/* --- Base Styles --- */
-html {
+/* --- Base Styles & Mobile Stability Fix --- */
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    position: relative;
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     color: #333;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+    background-color: #f8f9fa;
+}
+
+/* Fix Bootstrap Row agar tidak bocor samping */
+.row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
 }
 
 /* --- Hero Section --- */
@@ -20,7 +29,6 @@ body {
     min-height: 100vh;
 }
 
-/* Hero Image Animation */
 .hero-img {
     max-height: 450px;
     animation: float 6s ease-in-out infinite;
@@ -32,7 +40,7 @@ body {
     100% { transform: translateY(0px); }
 }
 
-/* --- Navbar Styling --- */
+/* --- Navbar --- */
 .navbar {
     transition: all 0.4s ease;
     padding: 20px 0;
@@ -44,7 +52,6 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-/* --- Mobile Toggle Menu --- */
 @media (max-width: 991.98px) {
     .navbar-collapse {
         background-color: rgba(15, 23, 42, 0.98) !important; 
@@ -53,27 +60,33 @@ body {
         border-radius: 15px;
         box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
-    
     .nav-item {
         text-align: center;
         padding: 10px 0;
         border-bottom: 1px solid rgba(255,255,255,0.1);
     }
-    
     .nav-item:last-child { border-bottom: none; }
     .hero-text { text-align: center; padding-top: 100px; }
 }
 
-/* --- Wave & Decoration --- */
+/* --- Wave & Decorations --- */
 .wave-container {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     line-height: 0;
+    overflow: hidden;
 }
 
-/* Fix Underline: Paksa tampil dengan gradient */
+.wave-container svg {
+    width: calc(100% + 1.3px);
+    height: auto;
+    display: block;
+    margin-bottom: -1px; 
+    position: relative;
+}
+
 .underline {
     width: 80px !important;
     height: 4px !important;
@@ -84,12 +97,7 @@ body {
     display: block;
 }
 
-/* --- Sections --- */
-#projects-section, #about-section, #campusjaya-section {
-    scroll-margin-top: 80px;
-}
-
-/* --- Project Card Styles (Pop-Up Effect) --- */
+/* --- Project Card (Pop-up Effect) --- */
 .project-card {
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
     cursor: pointer;
@@ -100,7 +108,7 @@ body {
 }
 
 .project-card:hover {
-    transform: translateY(-15px) scale(1.02) !important; /* Efek Pop ke depan */
+    transform: translateY(-15px) scale(1.02) !important;
     box-shadow: 0 20px 40px rgba(0,0,0,0.2) !important;
     z-index: 10;
 }
@@ -116,7 +124,7 @@ body {
     transform: scale(1.1);
 }
 
-/* --- Team Styles (Blue Glow Effect) --- */
+/* --- Team Member (Blue Glow Effect) --- */
 .team-img {
     width: 150px;
     height: 150px;
@@ -127,8 +135,8 @@ body {
 }
 
 .team-item:hover .team-img {
-    border-color: #1e3a8a !important; /* Animasi garis biru */
-    box-shadow: 0 0 25px rgba(30, 58, 138, 0.7) !important; /* Efek Glow Biru */
+    border-color: #1e3a8a !important;
+    box-shadow: 0 0 25px rgba(30, 58, 138, 0.7) !important;
     transform: scale(1.1);
 }
 

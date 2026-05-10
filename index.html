@@ -10,12 +10,11 @@
     <link rel="stylesheet" href="assets/css/style.css">
     
     <style>
-        /* Gue selipin CSS Smooth Scroll di sini biar fix jalannya mulus */
         html {
             scroll-behavior: smooth;
         }
         #projects-section {
-            scroll-margin-top: 80px; /* Supaya judul nggak ketutup navbar pas discroll */
+            scroll-margin-top: 80px; 
         }
     </style>
 </head>
@@ -30,7 +29,7 @@
             
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#campusjaya-section">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects-section">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about-section">About</a></li>
                     <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
@@ -41,7 +40,7 @@
         </div>
     </nav>
 
-    <section class="hero-section">
+    <section id="campusjaya-section" class="hero-section">
         <div class="container">
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-6 text-white hero-text">
@@ -59,21 +58,105 @@
         </div>
     </section>
 
-    <section id="projects-section" class="py-5">
-        <div class="container text-center py-5">
-            <h2 class="display-5 fw-bold mb-4">Projects</h2>
-            <div class="underline mx-auto mb-4"></div>
-            <p class="text-muted">Projects Coming Soon.</p>
+    <section id="projects-section" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-4">Our Projects</h2>
+                <div class="underline mx-auto mb-4"></div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Toko Gen Z -->
+                <div class="col-md-6 col-lg-4">
+                    <a href="https://test.campusjaya.site/" target="_blank" class="text-decoration-none">
+                        <div class="card project-card h-100 border-0 shadow-sm">
+                            <div class="overflow-hidden">
+                                <img src="/assets/images/logo-tokogenz.png" class="card-img-top project-img" alt="Project 1">
+                            </div>
+                            <div class="card-body p-4">
+                                <h5 class="card-title fw-bold text-dark">Streaming Ecommerce</h5>
+                                <p class="card-text text-muted">Membangun Aplikasi Live Streaming Ecommerce berbasis web dan mobile.</p>
+                                <span class="badge rounded-pill bg-danger">Laravel</span>
+                                <span class="badge rounded-pill bg-primary">IONIC</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="about-section" class="py-5">
-        <div class="container text-center py-5">
-            <h2 class="display-5 fw-bold mb-4">About</h2>
+        <div class="container py-5 text-center">
+            <h2 class="display-5 fw-bold mb-4">Meet Our Team</h2>
             <div class="underline mx-auto mb-4"></div>
-            <p class="text-muted">Hi There.</p>
+            
+            <div class="row justify-content-center g-5">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="team-item">
+                        <div class="mb-3">
+                            <img src="/assets/images/rahmat.jpeg" class="img-fluid rounded-circle team-img shadow" alt="Programmer 1">
+                        </div>
+                        <h5 class="fw-bold mb-1">Rahmat Abdullah</h5>
+                        <p class="text-muted">Lead Developer</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="team-item">
+                        <div class="mb-3">
+                            <img src="/assets/images/kia.jpeg" class="img-fluid rounded-circle team-img shadow" alt="Programmer 2">
+                        </div>
+                        <h5 class="fw-bold mb-1">Rizqya Sanria Juliana</h5>
+                        <p class="text-muted">UI/UX Designer</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="team-item">
+                        <div class="mb-3">
+                            <img src="/assets/images/rifky.jpeg" class="img-fluid rounded-circle team-img shadow" alt="Programmer 3">
+                        </div>
+                        <h5 class="fw-bold mb-1">Rifky Fadillah</h5>
+                        <p class="text-muted">Mobile Dev</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="team-item">
+                        <div class="mb-3">
+                            <img src="/assets/images/faisal.jpeg" class="img-fluid rounded-circle team-img shadow" alt="Programmer 3">
+                        </div>
+                        <h5 class="fw-bold mb-1">Faisal Akbar</h5>
+                        <p class="text-muted">Web App Dev</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="team-item">
+                        <div class="mb-3">
+                            <img src="/assets/images/faqih.jpeg" class="img-fluid rounded-circle team-img shadow" alt="Programmer 3">
+                        </div>
+                        <h5 class="fw-bold mb-1">Auza'i Al Faqih</h5>
+                        <p class="text-muted">UI/UX Designer</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-3">Follow Campus Jaya On:</p>
+            <div class="d-flex justify-content-center gap-4">
+                <a href="https://www.instagram.com/campus.jaya" target="_blank" class="text-white text-decoration-none"><i class="fab fa-instagram"></i> Instagram</a>
+                <!-- <a href="#" class="text-white text-decoration-none" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" class="text-white text-decoration-none" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> -->
+            </div>
+            <hr class="mt-4 opacity-25">
+            <p class="small opacity-50 mb-0">&copy; 2026 Campus Jaya</p>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>

@@ -6,22 +6,24 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     color: #333;
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
 }
 
 /* --- Hero Section --- */
 .hero-section {
-    /* Gradient navy sesuai kode lama lo */
     background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 50%, #000000 100%);
     position: relative;
     overflow: hidden;
     padding-bottom: 100px;
+    min-height: 100vh;
 }
 
 /* Hero Image Animation */
 .hero-img {
-    animation: float 6s ease-in-out infinite;
     max-height: 450px;
+    animation: float 6s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -36,9 +38,8 @@ body {
     padding: 20px 0;
 }
 
-/* State Navbar saat di-scroll */
 .navbar.scrolled {
-    background: #0f172a !important; /* Fix: Tambah tanda # */
+    background-color: #0f172a !important;
     padding: 10px 0;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
@@ -46,8 +47,7 @@ body {
 /* --- Mobile Toggle Menu --- */
 @media (max-width: 991.98px) {
     .navbar-collapse {
-        /* Warna background menu mobile disamakan dengan tema navy/dark blue */
-        background: rgba(15, 23, 42, 0.98); 
+        background-color: rgba(15, 23, 42, 0.98) !important; 
         margin-top: 15px;
         padding: 20px;
         border-radius: 15px;
@@ -60,71 +60,77 @@ body {
         border-bottom: 1px solid rgba(255,255,255,0.1);
     }
     
-    .nav-item:last-child {
-        border-bottom: none;
-    }
-
-    .hero-text {
-        text-align: center;
-        padding-top: 100px;
-    }
+    .nav-item:last-child { border-bottom: none; }
+    .hero-text { text-align: center; padding-top: 100px; }
 }
 
 /* --- Wave & Decoration --- */
 .wave-container {
     position: absolute;
     bottom: 0;
+    left: 0;
     width: 100%;
     line-height: 0;
 }
 
+/* Fix Underline: Paksa tampil dengan gradient */
 .underline {
-    width: 80px;
-    height: 4px;
-    /* Underline gradient pink-orange sesuai code lama */
-    background: linear-gradient(to right, #1e3a8a, #0f172a);
-    border-radius: 2px;
+    width: 80px !important;
+    height: 4px !important;
+    background: linear-gradient(to right, #1e3a8a, #0f172a) !important;
+    border-radius: 2px !important;
+    margin: 0 auto 20px auto;
+    opacity: 1 !important;
+    display: block;
 }
 
 /* --- Sections --- */
-#projects-section {
-    scroll-margin-top: 80px; /* Jarak agar judul tak tertutup navbar fixed */
+#projects-section, #about-section, #campusjaya-section {
+    scroll-margin-top: 80px;
 }
 
-/* --- Project Card Styles --- */
+/* --- Project Card Styles (Pop-Up Effect) --- */
 .project-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
     cursor: pointer;
+    overflow: hidden;
+    background: #fff;
+    z-index: 1;
+    position: relative;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+    transform: translateY(-15px) scale(1.02) !important; /* Efek Pop ke depan */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2) !important;
+    z-index: 10;
 }
 
 .project-img {
     transition: transform 0.5s ease;
     object-fit: cover;
     height: 200px;
+    width: 100%;
 }
 
 .project-card:hover .project-img {
     transform: scale(1.1);
 }
 
-/* --- Team Styles --- */
+/* --- Team Styles (Blue Glow Effect) --- */
 .team-img {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border: 5px solid white;
-    transition: all 0.3s ease;
+    border: 5px solid #ffffff !important;
+    transition: all 0.3s ease-in-out !important;
+    border-radius: 50%;
 }
 
 .team-item:hover .team-img {
-    border-color: #1e3a8a;
-    transform: scale(1.05);
+    border-color: #1e3a8a !important; /* Animasi garis biru */
+    box-shadow: 0 0 25px rgba(30, 58, 138, 0.7) !important; /* Efek Glow Biru */
+    transform: scale(1.1);
 }
 
-/* Font Awesome (Opsional jika ingin icon) */
+/* Font Awesome */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');

@@ -1,56 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Campus Jaya</title>
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css?v=4">
-    
+
     <style>
-        html { scroll-behavior: smooth; }
-        #projects-section, #about-section, #campusjaya-section {
-            scroll-margin-top: 80px; 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #projects-section,
+        #about-section,
+        #campusjaya-section {
+            scroll-margin-top: 80px;
         }
     </style>
 </head>
-<body>
 
+<body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="mainNav">
         <div class="container">
             <h1 class="navbar-brand fw-bold mb-0">Campus Jaya</h1>
-            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link active" href="#campusjaya-section">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects-section">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about-section">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team-section">Team</a></li>
                     <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
     <section id="campusjaya-section" class="hero-section">
         <div class="container">
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-6 text-white hero-text">
-                    <h6 class="text-uppercase fw-bold mb-3" style="letter-spacing: 2px;">What business are you?</h6>
-                    <h1 class="display-4 fw-bold mb-4">Main Hero Message to sell yourself!</h1>
-                    <p class="lead mb-5 opacity-75">Sub-hero message, not too long and not too short. Make it just right for your audience!</p>
+                    <h6 class="text-uppercase fw-bold mb-3 text-primary" style="letter-spacing: 3px;">Digital Solution
+                        Agency</h6>
+                    <h1 class="display-4 fw-bold mb-4">Building Your Digital Future.</h1>
+                    <p class="lead mb-5 opacity-75">Campus Jaya is here to help you build websites and mobile
+                        applications with the latest technology standards.</p>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block text-center">
+                    <div class="hero-logo-wrapper">
+                        <img src="assets/images/icon.png" class="img-fluid hero-logo-static" alt="Campus Jaya Logo">
+                    </div>
                 </div>
             </div>
         </div>
-        
         <div class="wave-container">
             <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#f8f9fa" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,192C384,171,480,117,576,112C672,107,768,149,864,165.3C960,181,1056,171,1152,149.3C1248,128,1344,96,1392,80L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                <path fill="#f8f9fa" fill-opacity="1"
+                    d="M0,192L48,197.3C96,203,192,213,288,192C384,171,480,117,576,112C672,107,768,149,864,165.3C960,181,1056,171,1152,149.3C1248,128,1344,96,1392,80L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
             </svg>
         </div>
     </section>
@@ -67,11 +81,13 @@
                     <a href="https://test.campusjaya.site/" target="_blank" class="text-decoration-none">
                         <div class="card project-card h-100 border-0 shadow-sm">
                             <div class="overflow-hidden">
-                                <img src="assets/images/logo-tokogenz.png" class="card-img-top project-img" alt="Project 1">
+                                <img src="assets/images/logo-tokogenz.png" class="card-img-top project-img"
+                                    alt="Project 1">
                             </div>
                             <div class="card-body p-4">
                                 <h5 class="card-title fw-bold text-dark">Streaming Ecommerce</h5>
-                                <p class="card-text text-muted">Membangun Aplikasi Live Streaming Ecommerce berbasis web dan mobile.</p>
+                                <p class="card-text text-muted">Building web-based and mobile Live Streaming Ecommerce
+                                    Applications.</p>
                                 <span class="badge rounded-pill bg-danger">Laravel</span>
                                 <span class="badge rounded-pill bg-primary">IONIC</span>
                             </div>
@@ -82,16 +98,71 @@
         </div>
     </section>
 
-    <section id="about-section" class="py-5">
+    <!-- About Section Upgrade -->
+    <section id="about-section" class="about-wrapper py-5">
+        <div class="container py-5 position-relative" style="z-index: 2;">
+
+            <!-- Latar Belakang Organisasi -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h3 class="text-primary fw-bold text-uppercase mb-2" style="letter-spacing: 3px;">Who We Are</h3>
+                    <h2 class="display-5 fw-bold mb-4">About Campus Jaya</h2>
+                    <div class="underline mx-auto mb-4"></div>
+                    <p class="lead text-muted px-md-5">
+                        Campus Jaya is an innovative organization dedicated to bringing your digital visions to life. We
+                        specialize in developing high-performance Web and Mobile Applications, professional Websites,
+                        and high-converting Landing Pages. Our expertise also extends to crafting elegant Digital
+                        Invitations—all built with cutting-edge industry standards that seamlessly blend smart
+                        functionality with captivating design to deliver an exceptional user experience.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Visi & Misi Cards -->
+            <div class="row g-4 justify-content-center mt-2">
+                <!-- Visi -->
+                <div class="col-md-5">
+                    <div class="p-5 h-100 glass-card">
+                        <div class="icon-box mb-4">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="fw-bold mb-3 text-dark">Our Vision</h3>
+                        <p class="text-muted leading-relaxed mb-0">
+                            Become a trusted digital partner capable of accelerating technological transformation for
+                            every individual and business through innovative software solutions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Misi -->
+                <div class="col-md-5">
+                    <div class="p-5 h-100 glass-card">
+                        <div class="icon-box mb-4">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="fw-bold mb-3 text-dark">Our Mission</h3>
+                        <ul class="misi-list text-muted p-0 m-0">
+                            <li>-Provide efficient web and application development solutions.</li>
+                            <li>-Prioritize a modern, user-friendly UI/UX.</li>
+                            <li>-Continue to innovate following global technology trends.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team-section" class="py-5">
         <div class="container py-5 text-center">
             <h2 class="display-5 fw-bold mb-4">Meet Our Team</h2>
             <div class="underline mx-auto mb-5"></div>
-            
+
             <div class="row justify-content-center g-5">
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="team-item">
                         <div class="mb-3">
-                            <img src="assets/images/rahmat.jpeg" class="img-fluid rounded-circle team-img shadow" alt="Rahmat">
+                            <img src="assets/images/rahmat.jpeg" class="img-fluid rounded-circle team-img shadow"
+                                alt="Rahmat">
                         </div>
                         <h5 class="fw-bold mb-1">Rahmat Abdullah</h5>
                         <p class="text-muted">Lead Developer</p>
@@ -100,7 +171,8 @@
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="team-item">
                         <div class="mb-3">
-                            <img src="assets/images/kia.jpeg" class="img-fluid rounded-circle team-img shadow" alt="Kia">
+                            <img src="assets/images/kia.jpeg" class="img-fluid rounded-circle team-img shadow"
+                                alt="Kia">
                         </div>
                         <h5 class="fw-bold mb-1">Rizqya Sanria Juliana</h5>
                         <p class="text-muted">UI/UX Designer</p>
@@ -109,28 +181,31 @@
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="team-item">
                         <div class="mb-3">
-                            <img src="assets/images/rifky.jpeg" class="img-fluid rounded-circle team-img shadow" alt="Rifky">
-                        </div>
-                        <h5 class="fw-bold mb-1">Rifky Fadillah</h5>
-                        <p class="text-muted">Mobile Dev</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="team-item">
-                        <div class="mb-3">
-                            <img src="assets/images/faisal.jpeg" class="img-fluid rounded-circle team-img shadow" alt="Faisal">
-                        </div>
-                        <h5 class="fw-bold mb-1">Faisal Akbar</h5>
-                        <p class="text-muted">Web App Dev</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="team-item">
-                        <div class="mb-3">
-                            <img src="assets/images/faqih.jpeg" class="img-fluid rounded-circle team-img shadow" alt="Faqih">
+                            <img src="assets/images/faqih.jpeg" class="img-fluid rounded-circle team-img shadow"
+                                alt="Faqih">
                         </div>
                         <h5 class="fw-bold mb-1">Auza'i Al Faqih</h5>
                         <p class="text-muted">UI/UX Designer</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="team-item">
+                        <div class="mb-3">
+                            <img src="assets/images/rifky.jpeg" class="img-fluid rounded-circle team-img shadow"
+                                alt="Rifky">
+                        </div>
+                        <h5 class="fw-bold mb-1">Rifky Fadillah</h5>
+                        <p class="text-muted">Mobile Developer</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="team-item">
+                        <div class="mb-3">
+                            <img src="assets/images/faisal.jpeg" class="img-fluid rounded-circle team-img shadow"
+                                alt="Faisal">
+                        </div>
+                        <h5 class="fw-bold mb-1">Faisal Akbar</h5>
+                        <p class="text-muted">Web App Developer</p>
                     </div>
                 </div>
             </div>
@@ -141,7 +216,8 @@
         <div class="container text-center">
             <p class="mb-3">Follow Campus Jaya On:</p>
             <div class="d-flex justify-content-center gap-4">
-                <a href="https://www.instagram.com/campus.jaya" target="_blank" class="text-white text-decoration-none"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.instagram.com/campus.jaya" target="_blank"
+                    class="text-white text-decoration-none"><i class="fab fa-instagram"></i> Instagram</a>
             </div>
             <hr class="mt-4 opacity-25">
             <p class="small opacity-50 mb-0">&copy; 2026 Campus Jaya</p>
@@ -151,4 +227,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

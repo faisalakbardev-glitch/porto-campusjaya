@@ -13,24 +13,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <link rel="stylesheet" href="assets/css/style.css?v=4">
-
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        #projects-section,
-        #about-section,
-        #team-section,
-        #campusjaya-section {
-            scroll-margin-top: 80px;
-        }
-
-        /* Tambahan CSS dikit biar animasi overflow pas di mobile ga bikin nge-bug/geser */
-        body {
-            overflow-x: hidden;
-        }
-    </style>
 </head>
 
 <body>
@@ -332,16 +314,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Inisialisasi AOS biar aktif berjalan
-        AOS.init({
-            duration: 1000, // Durasi animasi (1000ms = 1 detik)
-            once: true,     // Animasi cuma jalan sekali pas di-scroll ke bawah (biar ga cape naik turun bolak balik)
-            offset: 120     // Animasi baru jalan kalau elemen berjarak 120px dari bawah layar viewport
-        });
-    </script>
-    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>    
     <script src="assets/js/script.js"></script>
 </body>
 

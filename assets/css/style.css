@@ -1,3 +1,6 @@
+/* --- Font Awesome Import --- */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
 /* --- Base Styles & Mobile Stability Fix --- */
 html, body {
     max-width: 100% !important;
@@ -15,6 +18,15 @@ body {
     /* Texture grid halus agar background tidak flat */
     background-image: radial-gradient(#1e3a8a08 1.5px, transparent 1.5px);
     background-size: 40px 40px;
+    overflow-x: hidden; /* Tambahan fix agar animasi AOS tidak memicu scrollbar horizontal */
+}
+
+/* Jarak scroll anchor untuk navbar fixed-top */
+#projects-section,
+#about-section,
+#team-section,
+#campusjaya-section {
+    scroll-margin-top: 80px;
 }
 
 .row {
@@ -204,6 +216,3 @@ body {
 .text-primary {
     color: #3b82f6 !important;
 }
-
-/* Font Awesome Import */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');

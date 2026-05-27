@@ -3,7 +3,20 @@ document.addEventListener("DOMContentLoaded", function() {
     const menuToggle = document.getElementById('navbarNav');
     const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle)');
     
-    // 1. Logic Scroll (Tetap ada)
+    // ==========================================
+    // 1. Inisialisasi Animasi AOS (Animate On Scroll)
+    // ==========================================
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 1000, // Durasi animasi (1000ms = 1 detik)
+            once: true,     // Animasi cuma jalan sekali pas di-scroll ke bawah
+            offset: 120     // Animasi baru jalan kalau elemen berjarak 120px dari bawah layar
+        });
+    }
+
+    // ==========================================
+    // 2. Logic Scroll Navbar (Ubah Warna)
+    // ==========================================
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -12,8 +25,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // 2. Logic Auto-Close Mobile Menu
-    // Kita cek dulu apakah elemennya ada supaya tidak error
+    // ==========================================
+    // 3. Logic Auto-Close Mobile Menu
+    // ==========================================
     if (menuToggle) {
         const bsCollapse = new bootstrap.Collapse(menuToggle, { toggle: false });
         

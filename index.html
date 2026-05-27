@@ -8,6 +8,10 @@
     <link rel="icon" type="image/png" href="assets/images/campus.jpeg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="assets/css/style.css?v=4">
 
     <style>
@@ -17,8 +21,14 @@
 
         #projects-section,
         #about-section,
+        #team-section,
         #campusjaya-section {
             scroll-margin-top: 80px;
+        }
+
+        /* Tambahan CSS dikit biar animasi overflow pas di mobile ga bikin nge-bug/geser */
+        body {
+            overflow-x: hidden;
         }
     </style>
 </head>
@@ -27,8 +37,7 @@
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="mainNav">
         <div class="container">
             <h1 class="navbar-brand fw-bold mb-0">Campus Jaya</h1>
-            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -37,23 +46,20 @@
                     <li class="nav-item"><a class="nav-link" href="#projects-section">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about-section">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#team-section">Team</a></li>
-                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <section id="campusjaya-section" class="hero-section">
         <div class="container">
             <div class="row align-items-center min-vh-100">
-                <div class="col-lg-6 text-white hero-text">
-                    <h6 class="text-uppercase fw-bold mb-3 text-primary" style="letter-spacing: 3px;">Digital Solution
-                        Agency</h6>
+                <div class="col-lg-6 text-white hero-text" data-aos="fade-right">
+                    <h6 class="text-uppercase fw-bold mb-3 text-primary" style="letter-spacing: 3px;">Digital Solution Agency</h6>
                     <h1 class="display-4 fw-bold mb-4">Building Your Digital Future.</h1>
-                    <p class="lead mb-5 opacity-75">Campus Jaya is here to help you build websites and mobile
-                        applications with the latest technology standards.</p>
+                    <p class="lead mb-5 opacity-75">Campus Jaya is here to help you build websites and mobile applications with the latest technology standards.</p>
                 </div>
-                <div class="col-lg-6 d-none d-lg-block text-center">
+                <div class="col-lg-6 d-none d-lg-block text-center" data-aos="fade-left">
                     <div class="hero-logo-wrapper">
                         <img src="assets/images/icon.png" class="img-fluid hero-logo-static" alt="Campus Jaya Logo">
                     </div>
@@ -62,66 +68,50 @@
         </div>
         <div class="wave-container">
             <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#f8f9fa" fill-opacity="1"
-                    d="M0,192L48,197.3C96,203,192,213,288,192C384,171,480,117,576,112C672,107,768,149,864,165.3C960,181,1056,171,1152,149.3C1248,128,1344,96,1392,80L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-                </path>
+                <path fill="#f8f9fa" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,192C384,171,480,117,576,112C672,107,768,149,864,165.3C960,181,1056,171,1152,149.3C1248,128,1344,96,1392,80L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
             </svg>
         </div>
     </section>
 
     <section id="projects-section" class="py-5 bg-light">
         <div class="container py-5">
-            <div class="text-center mb-5">
+            <div class="text-center mb-5" data-aos="fade-up">
                 <h2 class="display-5 fw-bold mb-4">Our Projects</h2>
                 <div class="underline mx-auto mb-4"></div>
             </div>
 
             <div class="row g-4">
-                <!-- Toko Gen Z -->
-                <div class="col-md-6 col-lg-3">
-                    <a href="https://test.campusjaya.site/" target="_blank" class="text-decoration-none">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                         <div class="card project-card h-100 border-0 shadow-sm d-flex flex-column">
                             <div class="overflow-hidden">
-                                <img src="assets/images/logo-tokogenz.png" class="card-img-top project-img"
-                                    alt="Project 1" style="height: 200px; object-fit: cover;">
+                                <img src="assets/images/logo-tokogenz.png" class="card-img-top project-img" alt="Toko Gen Z" style="height: 200px; object-fit: cover;">
                             </div>
-
                             <div class="card-body p-4 flex-grow-1">
                                 <h5 class="card-title fw-bold text-dark mb-2">Streaming Ecommerce</h5>
-                                <p class="card-text text-muted mb-0">Building web-based and mobile Live Streaming
-                                    Ecommerce Applications.</p>
+                                <p class="card-text text-muted mb-0">Building web-based and mobile Live Streaming Ecommerce Applications.</p>
                             </div>
-
                             <div class="card-footer bg-transparent border-0 p-4 pt-0 d-flex flex-column gap-3">
                                 <div>
                                     <span class="badge rounded-pill bg-danger">Laravel</span>
                                     <span class="badge rounded-pill bg-primary">IONIC</span>
                                 </div>
                                 <div class="text-end">
-                                    <small class="text-muted"
-                                        style="font-size: 0.75rem; font-style: italic; display: block;">Made with Campus
-                                        Jaya</small>
+                                    <small class="text-muted" style="font-size: 0.75rem; font-style: italic; display: block;">Made with Campus Jaya</small>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <!-- Kalkulator IP Address -->
-                <div class="col-md-6 col-lg-3">
-                    <a href="https://faisalakbardev-glitch.github.io/kalkulator_ip_address/" target="_blank"
-                        class="text-decoration-none">
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
                         <div class="card project-card h-100 border-0 shadow-sm d-flex flex-column">
                             <div class="overflow-hidden">
-                                <img src="assets/images/icons.png" class="card-img-top project-img" alt="Project 1"
-                                    style="height: 200px; object-fit: cover;">
+                                <img src="assets/images/icons.png" class="card-img-top project-img" alt="Kalkulator IP" style="height: 200px; object-fit: cover;">
                             </div>
-
                             <div class="card-body p-4 flex-grow-1">
                                 <h5 class="card-title fw-bold text-dark mb-2">Kalkulator Ip Address</h5>
-                                <p class="card-text text-muted mb-0">Building a mobile application for IP Address
-                                    calculation and subnetting.</p>
+                                <p class="card-text text-muted mb-0">Building a mobile application for IP Address calculation and subnetting.</p>
                             </div>
-
                             <div class="card-footer bg-transparent border-0 p-4 pt-0 d-flex flex-column gap-3">
                                 <div>
                                     <span class="badge rounded-pill bg-primary">IONIC</span>
@@ -129,60 +119,45 @@
                                     <span class="badge rounded-pill bg-warning">Java Script</span>
                                 </div>
                                 <div class="text-end">
-                                    <small class="text-muted"
-                                        style="font-size: 0.75rem; font-style: italic; display: block;">Made with Faisal
-                                        Akbar</small>
+                                    <small class="text-muted" style="font-size: 0.75rem; font-style: italic; display: block;">Made with Faisal Akbar</small>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <!-- Mikrobill: Manajemen Server -->
-                <div class="col-md-6 col-lg-3">
-                    <!-- <a href="#" target="_blank" class="text-decoration-none"> -->
-                        <div class="card project-card h-100 border-0 shadow-sm d-flex flex-column">
-                            <div class="overflow-hidden">
-                                <img src="assets/images/Mikrobil.png" class="card-img-top project-img" alt="Project 1"
-                                    style="height: 200px; object-fit: cover;">
-                            </div>
 
-                            <div class="card-body p-4 flex-grow-1">
-                                <h5 class="card-title fw-bold text-dark mb-2">MikroBill: Manajemen Server</h5>
-                                <p class="card-text text-muted mb-0">Manage MikroTik: monitors, PPPoE, hotspots,
-                                    vouchers & easy billing.</p>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card project-card h-100 border-0 shadow-sm d-flex flex-column">
+                        <div class="overflow-hidden">
+                            <img src="assets/images/Mikrobil.png" class="card-img-top project-img" alt="MikroBill" style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="card-body p-4 flex-grow-1">
+                            <h5 class="card-title fw-bold text-dark mb-2">MikroBill: Manajemen Server</h5>
+                            <p class="card-text text-muted mb-0">Manage MikroTik: monitors, PPPoE, hotspots, vouchers & easy billing.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 p-4 pt-0 d-flex flex-column gap-3">
+                            <div>
+                                <span class="badge rounded-pill bg-primary">IONIC</span>
+                                <span class="badge rounded-pill bg-primary">Type Script</span>
+                                <span class="badge rounded-pill bg-warning">Java Script</span>
                             </div>
-
-                            <div class="card-footer bg-transparent border-0 p-4 pt-0 d-flex flex-column gap-3">
-                                <div>
-                                    <span class="badge rounded-pill bg-primary">IONIC</span>
-                                    <span class="badge rounded-pill bg-primary">Type Script</span>
-                                    <span class="badge rounded-pill bg-warning">Java Script</span>
-                                </div>
-                                <div class="text-end">
-                                    <small class="text-muted"
-                                        style="font-size: 0.75rem; font-style: italic; display: block;">Made with Rahmat
-                                        Abdullah</small>
-                                </div>
+                            <div class="text-end">
+                                <small class="text-muted" style="font-size: 0.75rem; font-style: italic; display: block;">Made with Rahmat Abdullah</small>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <!-- Resistorku: Hitung Resistor -->
-                <div class="col-md-6 col-lg-3">
-                    <a href="https://play.google.com/store/apps/details?id=com.rifky.resistorku" target="_blank"
-                        class="text-decoration-none">
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <a href="https://play.google.com/store/apps/details?id=com.rifky.resistorku" target="_blank" class="text-decoration-none">
                         <div class="card project-card h-100 border-0 shadow-sm d-flex flex-column">
                             <div class="overflow-hidden">
-                                <img src="assets/images/Resistorku.png" class="card-img-top project-img" alt="Project 1"
-                                    style="height: 200px; object-fit: cover;">
+                                <img src="assets/images/Resistorku.png" class="card-img-top project-img" alt="Resistorku" style="height: 200px; object-fit: cover;">
                             </div>
-
                             <div class="card-body p-4 flex-grow-1">
                                 <h5 class="card-title fw-bold text-dark mb-2">ResistorKu: Hitung Resistor</h5>
-                                <p class="card-text text-muted mb-3">Instant Resistor Calculator to read resistance
-                                    values through color.</p>
+                                <p class="card-text text-muted mb-3">Instant Resistor Calculator to read resistance values through color.</p>
                             </div>
-
                             <div class="card-footer bg-transparent border-0 p-4 pt-0 d-flex flex-column gap-3">
                                 <div>
                                     <span class="badge rounded-pill bg-primary">IONIC</span>
@@ -190,61 +165,45 @@
                                     <span class="badge rounded-pill bg-warning">Java Script</span>
                                 </div>
                                 <div class="text-end">
-                                    <small class="text-muted"
-                                        style="font-size: 0.75rem; font-style: italic; display: block;">Made with Rifky
-                                        Fadillah</small>
+                                    <small class="text-muted" style="font-size: 0.75rem; font-style: italic; display: block;">Made with Rifky Fadillah</small>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <!-- Sinau Aksara -->
-                <div class="col-md-6 col-lg-3">
-                    <!-- <a href="#" target="_blank" class="text-decoration-none"> -->
-                        <div class="card project-card h-100 border-0 shadow-sm d-flex flex-column">
-                            <div class="overflow-hidden">
-                                <img src="assets/images/Aksara.png" class="card-img-top project-img" alt="Project 1"
-                                    style="height: 200px; object-fit: cover;">
-                            </div>
 
-                            <div class="card-body p-4 flex-grow-1">
-                                <h5 class="card-title fw-bold text-dark mb-2">Sinau Aksara</h5>
-                                <p class="card-text text-muted mb-3">Learning Javanese script is easy, relaxing and
-                                    exciting for all users.</p>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card project-card h-100 border-0 shadow-sm d-flex flex-column">
+                        <div class="overflow-hidden">
+                            <img src="assets/images/Aksara.png" class="card-img-top project-img" alt="Sinau Aksara" style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="card-body p-4 flex-grow-1">
+                            <h5 class="card-title fw-bold text-dark mb-2">Sinau Aksara</h5>
+                            <p class="card-text text-muted mb-3">Learning Javanese script is easy, relaxing and exciting for all users.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 p-4 pt-0 d-flex flex-column gap-3">
+                            <div>
+                                <span class="badge rounded-pill bg-primary">IONIC</span>
+                                <span class="badge rounded-pill bg-primary">Type Script</span>
+                                <span class="badge rounded-pill bg-warning">Java Script</span>
                             </div>
-
-                            <div class="card-footer bg-transparent border-0 p-4 pt-0 d-flex flex-column gap-3">
-                                <div>
-                                    <span class="badge rounded-pill bg-primary">IONIC</span>
-                                    <span class="badge rounded-pill bg-primary">Type Script</span>
-                                    <span class="badge rounded-pill bg-warning">Java Script</span>
-                                </div>
-                                <div class="text-end">
-                                    <small class="text-muted"
-                                        style="font-size: 0.75rem; font-style: italic; display: block;">Made with Auza'i
-                                        Al
-                                        Faqih</small>
-                                </div>
+                            <div class="text-end">
+                                <small class="text-muted" style="font-size: 0.75rem; font-style: italic; display: block;">Made with Auza'i Al Faqih</small>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <!-- Todoist -->
-                <div class="col-md-6 col-lg-3">
-                    <a href="https://play.google.com/store/apps/details?id=com.rizqya.todoist" target="_blank"
-                        class="text-decoration-none">
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://play.google.com/store/apps/details?id=com.rizqya.todoist" target="_blank" class="text-decoration-none">
                         <div class="card project-card h-100 border-0 shadow-sm d-flex flex-column">
                             <div class="overflow-hidden">
-                                <img src="assets/images/Todoist.png" class="card-img-top project-img" alt="Project 1"
-                                    style="height: 200px; object-fit: cover;">
+                                <img src="assets/images/Todoist.png" class="card-img-top project-img" alt="Todoist" style="height: 200px; object-fit: cover;">
                             </div>
-
                             <div class="card-body p-4 flex-grow-1">
                                 <h5 class="card-title fw-bold text-dark mb-2">Todoist: Simple Task</h5>
-                                <p class="card-text text-muted mb-3">Minimalist todoist to manage daily schedules, tasks
-                                    & reminders easily.</p>
+                                <p class="card-text text-muted mb-3">Minimalist todoist to manage daily schedules, tasks & reminders easily.</p>
                             </div>
-
                             <div class="card-footer bg-transparent border-0 p-4 pt-0 d-flex flex-column gap-3">
                                 <div>
                                     <span class="badge rounded-pill bg-primary">IONIC</span>
@@ -252,9 +211,7 @@
                                     <span class="badge rounded-pill bg-warning">Java Script</span>
                                 </div>
                                 <div class="text-end">
-                                    <small class="text-muted"
-                                        style="font-size: 0.75rem; font-style: italic; display: block;">Made with Rizqya
-                                        Sanria Juliana</small>
+                                    <small class="text-muted" style="font-size: 0.75rem; font-style: italic; display: block;">Made with Rizqya Sanria Juliana</small>
                                 </div>
                             </div>
                         </div>
@@ -263,44 +220,34 @@
             </div>
         </div>
     </section>
-    <!-- About Section Upgrade -->
+
     <section id="about-section" class="about-wrapper py-5">
         <div class="container py-5 position-relative" style="z-index: 2;">
-
-            <!-- Latar Belakang Organisasi -->
-            <div class="row justify-content-center mb-5">
+            <div class="row justify-content-center mb-5" data-aos="fade-up">
                 <div class="col-lg-8 text-center">
                     <h3 class="text-primary fw-bold text-uppercase mb-2" style="letter-spacing: 3px;">Who We Are</h3>
                     <h2 class="display-5 fw-bold mb-4">About Campus Jaya</h2>
                     <div class="underline mx-auto mb-4"></div>
                     <p class="lead text-muted px-md-5">
-                        Campus Jaya is an innovative organization dedicated to bringing your digital visions to life. We
-                        specialize in developing high-performance Web and Mobile Applications, professional Websites,
-                        and high-converting Landing Pages. Our expertise also extends to crafting elegant Digital
-                        Invitations—all built with cutting-edge industry standards that seamlessly blend smart
-                        functionality with captivating design to deliver an exceptional user experience.
+                        Campus Jaya is an innovative organization dedicated to bringing your digital visions to life. We specialize in developing high-performance Web and Mobile Applications, professional Websites, and high-converting Landing Pages. Our expertise also extends to crafting elegant Digital Invitations—all built with cutting-edge industry standards that seamlessly blend smart functionality with captivating design to deliver an exceptional user experience.
                     </p>
                 </div>
             </div>
 
-            <!-- Visi & Misi Cards -->
             <div class="row g-4 justify-content-center mt-2">
-                <!-- Visi -->
-                <div class="col-md-5">
+                <div class="col-md-5" data-aos="zoom-in" data-aos-delay="100">
                     <div class="p-5 h-100 glass-card">
                         <div class="icon-box mb-4">
                             <i class="fas fa-eye"></i>
                         </div>
                         <h3 class="fw-bold mb-3 text-dark">Our Vision</h3>
                         <p class="text-muted leading-relaxed mb-0">
-                            Become a trusted digital partner capable of accelerating technological transformation for
-                            every individual and business through innovative software solutions.
+                            Become a trusted digital partner capable of accelerating technological transformation for every individual and business through innovative software solutions.
                         </p>
                     </div>
                 </div>
 
-                <!-- Misi -->
-                <div class="col-md-5">
+                <div class="col-md-5" data-aos="zoom-in" data-aos-delay="300">
                     <div class="p-5 h-100 glass-card">
                         <div class="icon-box mb-4">
                             <i class="fas fa-rocket"></i>
@@ -319,55 +266,50 @@
 
     <section id="team-section" class="py-5">
         <div class="container py-5 text-center">
-            <h2 class="display-5 fw-bold mb-4">Meet Our Team</h2>
-            <div class="underline mx-auto mb-5"></div>
+            <h2 class="display-5 fw-bold mb-4" data-aos="fade-up">Meet Our Team</h2>
+            <div class="underline mx-auto mb-5" data-aos="fade-up"></div>
 
             <div class="row justify-content-center g-5">
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="team-item">
                         <div class="mb-3">
-                            <img src="assets/images/rahmat.jpeg" class="img-fluid rounded-circle team-img shadow"
-                                alt="Rahmat">
+                            <img src="assets/images/rahmat.jpeg" class="img-fluid rounded-circle team-img shadow" alt="Rahmat">
                         </div>
                         <h5 class="fw-bold mb-1">Rahmat Abdullah</h5>
                         <p class="text-muted">Lead Developer</p>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="200">
                     <div class="team-item">
                         <div class="mb-3">
-                            <img src="assets/images/kia.jpeg" class="img-fluid rounded-circle team-img shadow"
-                                alt="Kia">
+                            <img src="assets/images/kia.jpeg" class="img-fluid rounded-circle team-img shadow" alt="Kia">
                         </div>
                         <h5 class="fw-bold mb-1">Rizqya Sanria Juliana</h5>
                         <p class="text-muted">UI/UX Designer</p>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="300">
                     <div class="team-item">
                         <div class="mb-3">
-                            <img src="assets/images/faqih.jpeg" class="img-fluid rounded-circle team-img shadow"
-                                alt="Faqih">
+                            <img src="assets/images/faqih.jpeg" class="img-fluid rounded-circle team-img shadow" alt="Faqih">
                         </div>
                         <h5 class="fw-bold mb-1">Auza'i Al Faqih</h5>
                         <p class="text-muted">UI/UX Designer</p>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="400">
                     <div class="team-item">
                         <div class="mb-3">
-                            <img src="assets/images/rifky.jpeg" class="img-fluid rounded-circle team-img shadow"
-                                alt="Rifky">
+                            <img src="assets/images/rifky.jpeg" class="img-fluid rounded-circle team-img shadow" alt="Rifky">
                         </div>
                         <h5 class="fw-bold mb-1">Rifky Fadillah</h5>
                         <p class="text-muted">Mobile Developer</p>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="500">
                     <div class="team-item">
                         <div class="mb-3">
-                            <img src="assets/images/faisal.jpeg" class="img-fluid rounded-circle team-img shadow"
-                                alt="Faisal">
+                            <img src="assets/images/faisal.jpeg" class="img-fluid rounded-circle team-img shadow" alt="Faisal">
                         </div>
                         <h5 class="fw-bold mb-1">Faisal Akbar</h5>
                         <p class="text-muted">Web App Developer</p>
@@ -381,8 +323,7 @@
         <div class="container text-center">
             <p class="mb-3">Follow Campus Jaya On:</p>
             <div class="d-flex justify-content-center gap-4">
-                <a href="https://www.instagram.com/campus.jaya" target="_blank"
-                    class="text-white text-decoration-none"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.instagram.com/campus.jaya" target="_blank" class="text-white text-decoration-none"><i class="fab fa-instagram"></i> Instagram</a>
             </div>
             <hr class="mt-4 opacity-25">
             <p class="small opacity-50 mb-0">&copy; 2026 Campus Jaya</p>
@@ -390,6 +331,17 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inisialisasi AOS biar aktif berjalan
+        AOS.init({
+            duration: 1000, // Durasi animasi (1000ms = 1 detik)
+            once: true,     // Animasi cuma jalan sekali pas di-scroll ke bawah (biar ga cape naik turun bolak balik)
+            offset: 120     // Animasi baru jalan kalau elemen berjarak 120px dari bawah layar viewport
+        });
+    </script>
+    
     <script src="assets/js/script.js"></script>
 </body>
 
